@@ -1,0 +1,10 @@
+{
+	"id": "32091", 
+	"name": "Omega's Cat", 
+	"title": "Event Manager", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

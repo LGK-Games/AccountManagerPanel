@@ -1,0 +1,10 @@
+{
+	"id": "30559", 
+	"name": "Kunai", 
+	"title": "Armor Merchant", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

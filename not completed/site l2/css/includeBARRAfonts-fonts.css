@@ -1,0 +1,104 @@
+/***  Adelon Book  ***/
+@font-face {
+	font-family: 'AdelonBook';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_book_macroman/Adelon-Book-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_book_macroman/Adelon-Book-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_book_macroman/Adelon-Book-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_book_macroman/Adelon-Book-webfont.svg#webfont7NUZb6JI') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Adelon Medium  ***/
+@font-face {
+	font-family: 'AdelonMedium';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_medium_macroman/Adelon-Medium-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_medium_macroman/Adelon-Medium-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_medium_macroman/Adelon-Medium-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_medium_macroman/Adelon-Medium-webfont.svg#webfontEtNqJmif') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Adelon Bold  ***/
+@font-face {
+	font-family: 'AdelonBold';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_bold_macroman/Adelon-Bold-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_bold_macroman/Adelon-Bold-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_bold_macroman/Adelon-Bold-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/adelon/adelon_bold_macroman/Adelon-Bold-webfont.svg#webfontrHRKAga5') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Light  ***/
+@font-face {
+	font-family: 'CartoGothicProLight';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_light_macroman/CartoGothicPro-Light-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_light_macroman/CartoGothicPro-Light-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_light_macroman/CartoGothicPro-Light-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_light_macroman/CartoGothicPro-Light-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Light Italic  ***/
+@font-face {
+	font-family: 'CartoGothicProLightItalic';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_lightitalic_macroman/CartoGothicPro-LightItalic-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_lightitalic_macroman/CartoGothicPro-LightItalic-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_lightitalic_macroman/CartoGothicPro-LightItalic-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_lightitalic_macroman/CartoGothicPro-LightItalic-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Book  ***/
+@font-face {
+	font-family: 'CartoGothicProBook';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_book_macroman/CartoGothicPro-Book-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_book_macroman/CartoGothicPro-Book-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_book_macroman/CartoGothicPro-Book-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_book_macroman/CartoGothicPro-Book-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Italic  ***/
+@font-face {
+	font-family: 'CartoGothicProItalic';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_italic_macroman/CartoGothicPro-Italic-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_italic_macroman/CartoGothicPro-Italic-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_italic_macroman/CartoGothicPro-Italic-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_italic_macroman/CartoGothicPro-Italic-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Bold  ***/
+@font-face {
+	font-family: 'CartoGothicProBold';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bold_macroman/CartoGothicPro-Bold-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bold_macroman/CartoGothicPro-Bold-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bold_macroman/CartoGothicPro-Bold-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bold_macroman/CartoGothicPro-Bold-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Bold Italic  ***/
+@font-face {
+	font-family: 'CartoGothicProBoldItalic';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bolditalic_macroman/CartoGothicPro-BoldItalic-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bolditalic_macroman/CartoGothicPro-BoldItalic-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bolditalic_macroman/CartoGothicPro-BoldItalic-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_bolditalic_macroman/CartoGothicPro-BoldItalic-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Black  ***/
+@font-face {
+	font-family: 'CartoGothicProBlack';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_black_macroman/CartoGothicPro-Black-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_black_macroman/CartoGothicPro-Black-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_black_macroman/CartoGothicPro-Black-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_black_macroman/CartoGothicPro-Black-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Pro Black Italic  ***/
+@font-face {
+	font-family: 'CartoGothicProBlackItalic';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_blackitalic_macroman/CartoGothicPro-BlackItalic-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_blackitalic_macroman/CartoGothicPro-BlackItalic-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_blackitalic_macroman/CartoGothicPro-BlackItalic-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothicpro_blackitalic_macroman/CartoGothicPro-BlackItalic-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Caps Light  ***/
+@font-face {
+	font-family: 'CartoGothicCapsLight';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_light_macroman/CartoGothicCaps-Light-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_light_macroman/CartoGothicCaps-Light-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_light_macroman/CartoGothicCaps-Light-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_light_macroman/CartoGothicCaps-Light-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/***  Carto Gothic Caps Book  ***/
+@font-face {
+	font-family: 'CartoGothicCapsBook';
+	src: url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_book_macroman/CartoGothicCaps-Book-webfont.eot');
+	src: local('☺'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_book_macroman/CartoGothicCaps-Book-webfont.woff') format('woff'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_book_macroman/CartoGothicCaps-Book-webfont.ttf') format('truetype'), url('//fonts.ncwest.ncsoft.com/includes/fonts/cartogothicpro/cartogothiccaps_book_macroman/CartoGothicCaps-Book-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

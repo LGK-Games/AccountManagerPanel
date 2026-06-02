@@ -1,0 +1,10 @@
+{
+	"id": "29009", 
+	"name": "Dicor", 
+	"title": "", 
+	"level": "47", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4035", "level": "4"}, {"id": "4045", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "30503", 
+	"name": "Rikadio", 
+	"title": "Warehouse Chief", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

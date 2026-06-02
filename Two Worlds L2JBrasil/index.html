@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2JBRASIL - Escolha seu mundo!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+<link rel="stylesheet" href="css/style.css"></head>
+<body class="min-h-screen flex flex-col hero-bg">
+
+    <!-- Header com Logo -->
+    <header class="flex justify-center pt-12 pb-2 px-6">
+        <div class="logo-container flex items-center gap-4">
+            <i class="fa-solid fa-shield-halved text-5xl md:text-6xl text-[#fde047]"></i>
+            <span class="text-5xl md:text-7xl font-fantasy font-bold tracking-tighter uppercase gold-brand-effect">
+                L2JBRASIL
+            </span>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 pt-8 pb-0">
+        
+        <div class="text-center mb-10 space-y-1">
+            <p class="text-[#d4af37] text-[10px] font-bold tracking-[0.4em] uppercase">Escolha o seu mundo e tenha um</p>
+            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tight">
+                Destino <span class="gold-brand-effect">Imortal</span>
+            </h1>
+        </div>
+
+        <!-- Container de Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-5xl">
+            
+            <!-- Card Essence -->
+            <div class="server-card glass-panel rounded-3xl p-1 text-center group cursor-pointer">
+                <div class="elysium-bg"></div>
+                
+                <div class="p-8 md:p-12 rounded-[1.4rem] h-full flex flex-col items-center relative z-10">
+                    <div class="mb-6 relative">
+                        <div class="w-24 h-24 rounded-full glass-panel flex items-center justify-center border-emerald-500/20 overflow-hidden">
+                            <img src="https://unsimpleworld.com/portfolio/website-creation-lineage-2-multiworld-essence/MW_Essence-lineage-2-thumb-big.jpg" alt="Essence Avatar" class="avatar-circle">
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full border-4 border-black pulse-online"></div>
+                    </div>
+
+                    <h2 class="text-3xl font-fantasy mb-1">Essence</h2>
+                    <p class="text-emerald-400 text-xs font-bold tracking-widest mb-6 uppercase">Classic Progressive 1x</p>
+                    
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
+                        Redescubra o desafio. Um mundo focado na conquista lenta, política de clans e economia estável.
+                    </p>
+
+                    <div class="flex gap-4 w-full mt-auto">
+                        <div class="flex-1 stat-badge py-3 rounded-2xl">
+                            <span class="block text-xs text-gray-500 uppercase">Players</span>
+                            <span class="text-lg font-bold">842</span>
+                        </div>
+                        <div class="flex-1 stat-badge py-3 rounded-2xl">
+                            <span class="block text-xs text-gray-500 uppercase">Status</span>
+                            <span class="text-lg font-bold text-emerald-400">Online</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-action w-full mt-6 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs">
+                        Escolher Mundo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card Interlude -->
+            <div class="server-card glass-panel rounded-3xl p-1 text-center group cursor-pointer">
+                <div class="hellbound-bg"></div>
+
+                <div class="p-8 md:p-12 rounded-[1.4rem] h-full flex flex-col items-center relative z-10">
+                    <div class="mb-6 relative">
+                        <div class="w-24 h-24 rounded-full glass-panel flex items-center justify-center border-red-500/20 overflow-hidden">
+                            <img src="https://l2barbarians.com/wp-content/uploads/2024/02/l2i.jpg" alt="Interlude Avatar" class="avatar-circle">
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full border-4 border-black pulse-online"></div>
+                    </div>
+
+                    <h2 class="text-3xl font-fantasy mb-1">Interlude</h2>
+                    <p class="text-red-500 text-xs font-bold tracking-widest mb-6 uppercase">Interlude 300x</p>
+                    
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
+                        Adrenalina pura. Farm rápido, itens customizados e eventos de PvP a cada hora. Domine o servidor.
+                    </p>
+
+                    <div class="flex gap-4 w-full mt-auto">
+                        <div class="flex-1 stat-badge py-3 rounded-2xl">
+                            <span class="block text-xs text-gray-500 uppercase">Players</span>
+                            <span class="text-lg font-bold">1,402</span>
+                        </div>
+                        <div class="flex-1 stat-badge py-3 rounded-2xl">
+                            <span class="block text-xs text-gray-500 uppercase">Status</span>
+                            <span class="text-lg font-bold text-emerald-400">Online</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-action w-full mt-6 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs">
+                        Entrar na Batalha
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Discord Community CTA Section -->
+        <div class="mt-12 mb-12 w-full max-w-5xl glass-panel py-8 px-10 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-10 border-white/10 relative overflow-hidden group/cta">
+            <!-- Glow decorativo de fundo -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-[#5865F2] opacity-5 blur-[100px] pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8 z-10">
+                <div class="relative">
+                    <div class="w-20 h-20 bg-gradient-to-br from-[#5865F2] to-[#404EED] rounded-2xl flex items-center justify-center shadow-2xl shadow-[#5865F2]/20 group-hover/cta:scale-105 transition-transform duration-500">
+                        <i class="fa-brands fa-discord text-4xl text-white"></i>
+                    </div>
+                    <!-- Crachá de "Live" fictício -->
+                    <div class="absolute -top-2 -right-2 bg-red-500 text-[9px] font-bold px-2 py-0.5 rounded-full text-white tracking-tighter uppercase animate-pulse">
+                        Live Now
+                    </div>
+                </div>
+
+                <div class="text-center md:text-left space-y-2">
+                    <h3 class="text-2xl font-fantasy font-bold text-white tracking-wide">Comunidade Global L2J</h3>
+                    <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 text-xs text-gray-400">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-emerald-500"></i> <b>1.2k</b> Online</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-blue-400"></i> <b>15.4k</b> Membros</span>
+                        <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-white/5 border border-white/10 italic">#suporte-24h</span>
+                    </div>
+                    <p class="text-sm text-gray-300 max-w-sm">Dúvidas, comércio entre jogadores e eventos exclusivos acontecem aqui!</p>
+                </div>
+            </div>
+            
+            <div class="h-16 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block"></div>
+
+            <div class="flex flex-col items-center gap-4 z-10 w-full md:w-auto">
+                <!-- Botão CONECTAR-SE aprimorado -->
+                <a href="#" class="btn-discord-premium flex items-center justify-center gap-4 px-12 py-5 rounded-2xl text-white text-lg font-black uppercase tracking-[0.15em] w-full md:w-auto shadow-2xl border border-white/20">
+                    <span>Conectar-se</span>
+                    <i class="fa-solid fa-tower-broadcast text-sm opacity-90 group-hover/cta:rotate-12 transition-transform"></i>
+                </a>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em]">Acesso instantâneo e gratuito</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Glass -->
+    <footer class="mt-auto glass-panel border-t-0 rounded-t-[3rem] px-6 py-6">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            
+            <div class="space-y-2">
+                <div class="flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-3xl text-[#fde047]"></i>
+                    <span class="text-2xl font-fantasy font-bold uppercase gold-brand-effect">L2JBRASIL</span>
+                </div>
+                <p class="text-gray-400 text-xs leading-relaxed max-sm mx-auto">
+                    A maior e mais estável comunidade de Lineage 2 do Brasil. Diversão e segurança desde 2024.
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-8 py-1">
+                <a href="#" class="text-gray-500 hover:text-[#d4af37] transition text-xl"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="text-gray-500 hover:text-[#d4af37] transition text-xl"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-[#d4af37] transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-[#d4af37] transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+
+            <div class="pt-0">
+                <p class="text-[9px] text-gray-600 uppercase tracking-widest leading-none">
+                    Lineage II © NCSoft. Servidor privado educacional. 
+                    <span class="block mt-1 font-bold gold-brand-effect text-[10px]">L2JBRASIL © 2024</span>
+                </p>
+            </div>
+            
+        </div>
+    </footer>
+
+
+<script src="js/script.js"></script></body></html>

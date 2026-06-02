@@ -1,0 +1,10 @@
+{
+	"id": "20166", 
+	"name": "Succubus", 
+	"title": "", 
+	"level": "32", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4278", "level": "1"}, {"id": "4333", "level": "5"}]
+}

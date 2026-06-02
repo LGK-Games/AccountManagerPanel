@@ -1,0 +1,10 @@
+{
+	"id": "30963", 
+	"name": "Statue of Fire", 
+	"title": "", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

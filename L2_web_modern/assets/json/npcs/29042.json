@@ -1,0 +1,10 @@
+{
+	"id": "29042", 
+	"name": "Inferno Golem", 
+	"title": "", 
+	"level": "81", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

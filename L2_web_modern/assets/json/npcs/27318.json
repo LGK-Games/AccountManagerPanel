@@ -1,0 +1,10 @@
+{
+	"id": "27318", 
+	"name": "Wendy's Guardian", 
+	"title": "Quest Monster", 
+	"level": "46", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4412", "level": "14"}, {"id": "4414", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "27185", 
+	"name": "Fairy Tree of Wind", 
+	"title": "Quest Monster", 
+	"level": "55", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4071", "level": "5"}, {"id": "4414", "level": "3"}]
+}

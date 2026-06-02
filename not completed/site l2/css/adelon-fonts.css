@@ -1,0 +1,35 @@
+/***  Adelon Book  ***/
+@font-face {
+	font-family: 'AdelonBook';
+	src: url('Adelon-Book-webfont.eot');
+	src: local('☺'), 
+		url('Adelon-Book-webfont.woff') format('woff'), 
+		url('Adelon-Book-webfont.ttf') format('truetype'), 
+		url('Adelon-Book-webfont.svg#webfontEtNqJmif') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/***  Adelon Medium  ***/
+@font-face {
+	font-family: 'AdelonMedium';
+	src: url('Adelon-Medium-webfont.eot');
+	src: local('☺'), 
+		url('Adelon-Medium-webfont.woff') format('woff'), 
+		url('Adelon-Medium-webfont.ttf') format('truetype'), 
+		url('Adelon-Medium-webfont.svg#webfontEtNqJmif') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/***  Adelon Bold  ***/
+@font-face {
+	font-family: 'AdelonBold';
+	src: url('Adelon-Bold-webfont.eot');
+	src: local('☺'), 
+		url('Adelon-Bold-webfont.woff') format('woff'), 
+		url('Adelon-Bold-webfont.ttf') format('truetype'), 
+		url('Adelon-Bold-webfont.svg#webfontrHRKueouo5') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

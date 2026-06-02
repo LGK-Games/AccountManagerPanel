@@ -1,0 +1,10 @@
+{
+	"id": "14767", 
+	"name": "Siege Golem", 
+	"title": "", 
+	"level": "80", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4079", "level": "1"}, {"id": "4332", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "27217", 
+	"name": "Soul of Well", 
+	"title": "Quest Monster", 
+	"level": "63", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4073", "level": "6"}, {"id": "4414", "level": "3"}]
+}

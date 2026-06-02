@@ -1,0 +1,10 @@
+{
+	"id": "27191", 
+	"name": "Malcom", 
+	"title": "Quest Monster", 
+	"level": "25", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4073", "level": "2"}]
+}

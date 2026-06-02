@@ -1,0 +1,10 @@
+{
+	"id": "27111", 
+	"name": "Cave Basilisk", 
+	"title": "Quest Monster", 
+	"level": "30", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[]
+}

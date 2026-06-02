@@ -1,0 +1,10 @@
+{
+	"id": "14650", 
+	"name": "Nightshade", 
+	"title": "", 
+	"level": "79", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4121", "level": "1"}, {"id": "4705", "level": "9"}, {"id": "4706", "level": "9"}, {"id": "4707", "level": "9"}]
+}

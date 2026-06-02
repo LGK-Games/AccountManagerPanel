@@ -1,0 +1,10 @@
+{
+	"id": "29045", 
+	"name": "Frintezza", 
+	"title": "", 
+	"level": "90", 
+	"isRaid": "false", 
+	"isGrandBoss": "true", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

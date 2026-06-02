@@ -1,0 +1,10 @@
+{
+	"id": "30003", 
+	"name": "Silvia", 
+	"title": "Accessory Merchant", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "29011", 
+	"name": "Susceptor", 
+	"title": "", 
+	"level": "49", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4001", "level": "4"}, {"id": "4045", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "30650", 
+	"name": "Gerald", 
+	"title": "Priest of the Earth", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

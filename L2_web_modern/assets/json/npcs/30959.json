@@ -1,0 +1,10 @@
+{
+	"id": "30959", 
+	"name": "Barbado", 
+	"title": "Musician", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "31493", 
+	"name": "Rift Post Hero", 
+	"title": "", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

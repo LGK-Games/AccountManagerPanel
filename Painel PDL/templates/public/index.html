@@ -1,0 +1,1090 @@
+{% extends 'layouts/base-default.html' %}
+{% load static i18n %}
+{% load custom_split %}
+{% load apoiador_extras %}
+
+{% block extrahead %}
+<link type="text/css" href="{% static 'public/css/index-carousel.css' %}" rel="stylesheet">
+<style>
+    /* Tops Section Styles */
+    .tops-section {
+        padding: 80px 0;
+        background: rgba(0, 0, 0, 0.8);
+        position: relative;
+    }
+
+    .tops-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url({% static 'default/images/bg/3.jpg' %}) center / cover no-repeat;
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+    .tops-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .tops-title span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #e6c77d;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .tops-title span img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .tops-title h1 {
+        color: #fff;
+        font-size: 48px;
+        font-weight: bold;
+        text-shadow: 0 0 20px rgba(230, 199, 125, 0.5);
+        margin: 0;
+    }
+
+    .tops-content {
+        position: relative;
+    }
+
+    .tops-content .line {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .tops-content .line img {
+        width: 100px;
+        height: auto;
+    }
+
+    /* Grid Layout */
+    .tops-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Coluna dos Rankings */
+    .tops-column {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tops {
+        background: rgba(53, 47, 35, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(230, 199, 125, 0.2);
+        border-radius: 15px;
+        padding: 30px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .tops > div > span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #e6c77d;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(230, 199, 125, 0.3);
+    }
+
+    .tops > div > span a {
+        transition: transform 0.3s ease;
+    }
+
+    .tops > div > span a:hover {
+        transform: scale(1.1);
+    }
+
+    .tops > div > span a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tops ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tops ul li {
+        margin-bottom: 12px;
+    }
+
+    .tops ul li a {
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+
+    .tops ul li a:hover {
+        background: rgba(230, 199, 125, 0.1);
+        color: #e6c77d;
+        transform: translateX(5px);
+    }
+
+    .tops ul li a span {
+        width: 8px;
+        height: 8px;
+        background: #e6c77d;
+        border-radius: 50%;
+        margin-right: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .tops ul li a:hover span {
+        transform: scale(1.5);
+        box-shadow: 0 0 10px rgba(230, 199, 125, 0.5);
+    }
+
+    /* Coluna de Informações */
+    .tops-info-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Cards de Informação */
+    .stats-card,
+    .cta-card {
+        background: rgba(53, 47, 35, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(230, 199, 125, 0.2);
+        border-radius: 15px;
+        padding: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .stats-card:hover,
+    .cta-card:hover {
+        border-color: rgba(230, 199, 125, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(230, 199, 125, 0.1);
+    }
+
+    .stats-card h3,
+    .cta-card h3 {
+        color: #e6c77d;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .stats-card h3 i,
+    .cta-card h3 i {
+        font-size: 20px;
+    }
+
+    /* Estatísticas */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 15px;
+        background: rgba(230, 199, 125, 0.05);
+        border-radius: 10px;
+        border: 1px solid rgba(230, 199, 125, 0.1);
+    }
+
+    .stat-number {
+        color: #e6c77d;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+    }
+
+    /* Status do servidor */
+    .stat-number.online {
+        color: #4CAF50;
+    }
+
+    .stat-number.online i {
+        color: #4CAF50;
+        font-size: 12px;
+        margin-right: 5px;
+        animation: pulse 2s infinite;
+    }
+
+    .stat-number.offline {
+        color: #f44336;
+    }
+
+    .stat-number.offline i {
+        color: #f44336;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+
+
+
+    /* Call to Action */
+    .cta-card p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .cta-btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .cta-btn.primary {
+        background: linear-gradient(135deg, #e6c77d, #d4af37);
+        color: #000;
+        border: 1px solid #e6c77d;
+    }
+
+    .cta-btn.primary:hover {
+        background: linear-gradient(135deg, #d4af37, #e6c77d);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(230, 199, 125, 0.3);
+    }
+
+    .cta-btn.secondary {
+        background: transparent;
+        color: #e6c77d;
+        border: 1px solid #e6c77d;
+    }
+
+    .cta-btn.secondary:hover {
+        background: rgba(230, 199, 125, 0.1);
+        transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .tops-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .tops-info-column {
+            order: -1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tops-title h1 {
+            font-size: 36px;
+        }
+        
+        .tops-grid {
+            gap: 20px;
+        }
+        
+        .tops,
+        .stats-card,
+        .cta-card {
+            margin: 0 20px;
+            padding: 20px;
+        }
+        
+        .tops > div > span {
+            font-size: 18px;
+        }
+        
+        .tops ul li a {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+        
+        .stats-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .cta-buttons {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .tops-title h1 {
+            font-size: 28px;
+        }
+        
+        .tops,
+        .stats-card,
+        .cta-card {
+            margin: 0 10px;
+            padding: 15px;
+        }
+        
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Banner Styles */
+    .banners-container {
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .banners-top {
+        background: rgba(0, 0, 0, 0.3);
+        margin-bottom: 0;
+    }
+
+    .banners-middle {
+        background: rgba(0, 0, 0, 0.2);
+        margin: 40px 0;
+    }
+
+    .banners-bottom {
+        background: rgba(0, 0, 0, 0.3);
+        margin-top: 40px;
+    }
+
+    .banner-item {
+        display: block;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .banner-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(230, 199, 125, 0.3);
+    }
+
+    .banner-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-item a {
+        display: block;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .banners-container {
+            padding: 15px 10px;
+        }
+        
+        .banner-item {
+            max-width: 100% !important;
+        }
+    }
+
+    /* Pop-up Styles */
+    .banner-popup-overlay {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        z-index: 99999 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        backdrop-filter: blur(5px);
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .banner-popup-overlay.active {
+        display: flex !important;
+    }
+
+    .banner-popup-container {
+        position: relative !important;
+        background: #fff !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+        animation: popupFadeIn 0.3s ease-out;
+        z-index: 100000 !important;
+        margin: auto !important;
+    }
+
+    @keyframes popupFadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .banner-popup-close {
+        position: absolute !important;
+        top: 10px !important;
+        right: 10px !important;
+        width: 35px !important;
+        height: 35px !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        border: none !important;
+        border-radius: 50% !important;
+        color: #fff !important;
+        font-size: 20px !important;
+        cursor: pointer !important;
+        z-index: 100001 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease;
+    }
+
+    .banner-popup-close:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: rotate(90deg);
+    }
+
+    .banner-popup-content {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-popup-content img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .banner-popup-content a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block video_background %}
+<!-- Background Video -->
+<div class="video">
+  <video autoplay muted loop src="{% static 'default/images/video.mp4' %}"></video>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Banners Topo -->
+{% if banners.top %}
+<div class="banners-container banners-top">
+    {% for banner in banners.top %}
+    <div class="banner-item" style="{{ banner.get_size_style }} {{ banner.get_position_style }}">
+        {% if banner.link %}
+        <a href="{{ banner.link }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ banner.image.url }}" alt="{{ banner.title|default:'Banner' }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </a>
+        {% else %}
+        <img src="{{ banner.image.url }}" alt="{{ banner.title|default:'Banner' }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Hero Section -->
+<section class="h">
+    <div class="h-logo" data-aos="fade-up" data-aos-duration="2000">
+        {% if site_logo %}
+            <img class="letters" src="{{ site_logo.image.url }}" alt="{{ site_logo.name }}">
+        {% else %}
+            <img class="letters" src="{% static 'default/images/logo.png' %}">
+        {% endif %}
+        <img class="circle" src="{% static 'default/images/logo-circle.png' %}">
+    </div>
+
+    <h1 data-aos="fade-up" data-aos-duration="2000">
+        {% if nome_servidor %}
+            {{ nome_servidor }}
+        {% else %}
+            {% trans "Inicie sua Jornada em Lineage Agora!" %}
+        {% endif %}
+    </h1>
+
+    <p class="hero-description" data-aos="fade-up" data-aos-duration="2000">
+        {% if descricao_servidor %}
+            "{{ descricao_servidor }}"
+        {% else %}
+            {% trans "Onde Lendas Nascem, Heróis Lutam e a Glória é Eterna." %}
+        {% endif %}
+    </p>
+
+    <div class="h-link" data-aos="fade-up" data-aos-duration="2000">
+        <a href="{% url 'downloads:download_list' %}">{% trans "Baixe o Jogo" %}</a>
+        <a href="{% url 'register' %}">{% trans "Crie sua conta mestra" %}</a>
+    </div>
+
+    <div class="h-scroll">
+        <a href="#features"><img src="{% static 'default/images/icons/scroll.png' %}"></a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="f" id="features">
+    <div class="f-title title container" data-aos="fade-up" data-aos-duration="2000">
+        <span><img src="{% static 'default/images/icons/text.png' %}">{% trans "Aproveite o melhor do Lineage" %}</span>
+        <h1>{% trans "O servidor mais atualizado, moderno e estável para jogar Lineage" %}</h1>
+    </div>
+
+    <div class="f-list container" data-aos="fade-up" data-aos-duration="2000">
+        <a class="f1" href="{% url 'wiki:home' %}">
+            <div style="background: url({% static 'default/images/features/1.jpg' %}) top / cover no-repeat;">
+                <span>
+                    <p>{% trans "PvP e Castelos" %}</p>
+                    <img src="{% static 'default/images/features/icon.png' %}">
+                </span>
+            </div>
+        </a>
+
+        <a class="f2" href="{% url 'wiki:home' %}">
+            <div style="background: url({% static 'default/images/features/2.jpg' %}) top / cover no-repeat;">
+                <span>
+                    <p>{% trans "Missões Personalizadas" %}</p>
+                    <img src="{% static 'default/images/features/icon.png' %}">
+                </span>
+            </div>
+        </a>
+
+        <a class="f3" href="{% url 'wiki:home' %}">
+            <div style="background: url({% static 'default/images/features/3.jpg' %}) top / cover no-repeat;">
+                <span>
+                    <p>{% trans "Eventos e Recompensas" %}</p>
+                    <img src="{% static 'default/images/features/icon.png' %}">
+                </span>
+            </div>
+        </a>
+    </div>
+
+    <div class="character"><img src="{% static 'default/images/features/character.png' %}"></div>
+</section>
+
+<!-- Wiki Section -->
+<section class="w">
+    <div class="w-title title container" data-aos="fade-up" data-aos-duration="2000">
+        <span><img src="{% static 'default/images/icons/text.png' %}">{% trans "Wiki" %}</span>
+        <h1>{% trans "Wiki e Atualizações do Lineage" %}</h1>
+    </div>
+
+    <div class="w-list container" data-aos="fade-up" data-aos-duration="2000">
+        <span class="line"><img src="{% static 'default/images/icons/line.png' %}"></span>
+
+        <div class="wiki">
+            <div>
+                <span>{% trans "Wiki" %}<a href="{% url 'wiki' %}"><img src="{% static 'default/images/icons/more.png' %}"></a></span>
+
+                <ul>
+                    <li><a href="{% url 'wiki' %}"><span></span>{% trans "Informações Gerais" %}</a></li>
+                    <li><a href="{% url 'wiki' %}"><span></span>{% trans "Taxas de Experiência" %}</a></li>
+                    <li><a href="{% url 'wiki' %}"><span></span>{% trans "Chefes de Raide e Instâncias" %}</a></li>
+                    <li><a href="{% url 'wiki' %}"><span></span>{% trans "Ajuda no Jogo" %}</a></li>
+                    <li><a href="{% url 'wiki' %}"><span></span>{% trans "Guia de Eventos" %}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {% for update in latest_updates %}
+        <a href="{% url 'updates' %}" class="update">
+            <div style="background: url({{ update.image.url }}) top / cover no-repeat;">
+                <div>
+                    <span>{% trans "Atualização" %}</span>
+                    <p>{{ update.title }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Top Clans Section -->
+<section class="clans" id="top-clans">
+    <div class="clans-title title container" data-aos="fade-up" data-aos-duration="2000">
+        <span><img src="{% static 'default/images/icons/text.png' %}">{% trans "Melhores Clãs" %}</span>
+    </div>
+
+    <div class="clans-table container" data-aos="fade-up" data-aos-duration="2000">
+        <div class="table-header">
+            <div class="col-rank">#</div>
+            <div class="col-crest">{% trans "Cresta" %}</div>
+            <div class="col-name">{% trans "Nome do Clã" %}</div>
+            <div class="col-level">{% trans "Nível" %}</div>
+            <div class="col-reputation">{% trans "Reputação" %}</div>
+            <div class="col-alliance">{% trans "Aliança" %}</div>
+            <div class="col-leader">{% trans "Líder" %}</div>
+            <div class="col-members">{% trans "Membros" %}</div>
+        </div>
+
+        <div class="table-body">
+            {% for clan in clanes %}
+            <div class="table-row {% if forloop.first %}first-place{% endif %}">
+                <div class="col-rank">
+                    {% if forloop.first %}
+                        <span class="rank-icon">👑</span>
+                    {% else %}
+                        {{ forloop.counter }}
+                    {% endif %}
+                </div>
+                <div class="col-crest">
+                    <div class="crest-container">
+                        {% if clan.ally_crest_image_base64 %}
+                            <img src="data:image/png;base64,{{ clan.ally_crest_image_base64 }}" alt="Alliance Crest" class="alliance-crest">
+                        {% endif %}
+                        <img src="data:image/png;base64,{{ clan.clan_crest_image_base64 }}" alt="Clan Crest" class="clan-crest">
+                    </div>
+                </div>
+                <div class="col-name">{{ clan.clan_name }}</div>
+                <div class="col-level">{{ clan.clan_level }}</div>
+                <div class="col-reputation">{{ clan.reputation_score }}</div>
+                <div class="col-alliance">{{ clan.ally_name|default:"-" }}</div>
+                <div class="col-leader">{{ clan.char_name }}</div>
+                <div class="col-members">{{ clan.membros }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Banners Meio -->
+{% if banners.middle %}
+<div class="banners-container banners-middle">
+    {% for banner in banners.middle %}
+    <div class="banner-item" style="{{ banner.get_size_style }} {{ banner.get_position_style }}">
+        {% if banner.link %}
+        <a href="{{ banner.link }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ banner.image.url }}" alt="{{ banner.title|default:'Banner' }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </a>
+        {% else %}
+        <img src="{{ banner.image.url }}" alt="{{ banner.title|default:'Banner' }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Tops Section -->
+<section class="tops-section">
+    <div class="tops-title title container" data-aos="fade-up" data-aos-duration="2000">
+        <h1>{% trans "Rankings do Servidor" %}</h1>
+    </div>
+
+    <div class="tops-content container" data-aos="fade-up" data-aos-duration="2000">
+        <span class="line"><img src="{% static 'default/images/icons/line.png' %}"></span>
+        
+        <div class="tops-grid">
+            <!-- Coluna dos Rankings -->
+            <div class="tops-column">
+                <div class="tops">
+                    <div>
+                        <span>{% trans "Rankings" %}<a href="{% url 'tops:home' %}"><img src="{% static 'default/images/icons/more.png' %}"></a></span>
+
+                        <ul>
+                            <li><a href="{% url 'tops:pvp' %}"><span></span>{% trans "Ranking PvP" %}</a></li>
+                            <li><a href="{% url 'tops:pk' %}"><span></span>{% trans "Ranking PK" %}</a></li>
+                            <li><a href="{% url 'tops:adena' %}"><span></span>{% trans "Ranking Adena" %}</a></li>
+                            <li><a href="{% url 'tops:clans' %}"><span></span>{% trans "Ranking Clãs" %}</a></li>
+                            <li><a href="{% url 'tops:level' %}"><span></span>{% trans "Ranking Nível" %}</a></li>
+                            <li><a href="{% url 'tops:olympiad' %}"><span></span>{% trans "Ranking Olimpíada" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna de Informações Adicionais -->
+            <div class="tops-info-column">
+                <!-- Estatísticas Rápidas -->
+                <div class="stats-card">
+                    <h3><i class="fas fa-chart-line"></i> {% trans "Estatísticas" %}</h3>
+                    <div class="stats-grid">
+                        {% if show_players_online %}
+                        <div class="stat-item">
+                            <div class="stat-number">{{ online|default:"0" }}</div>
+                            <div class="stat-label">{% trans "Online" %}</div>
+                        </div>
+                        {% endif %}
+                        <div class="stat-item">
+                            <div class="stat-number">{{ clanes|length|default:"0" }}</div>
+                            <div class="stat-label">{% trans "Clãs" %}</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">{% trans "Uptime" %}</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number {% if server_status.overall_status == 'online' %}online{% else %}offline{% endif %}">
+                                {% if server_status.overall_status == 'online' %}
+                                    <i class="fas fa-circle"></i> {% trans "Online" %}
+                                {% else %}
+                                    <i class="fas fa-circle"></i> {% trans "Offline" %}
+                                {% endif %}
+                            </div>
+                            <div class="stat-label">{% trans "Servidor" %}</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Call to Action -->
+                <div class="cta-card">
+                    <h3><i class="fas fa-star"></i> {% trans "Seja o Melhor!" %}</h3>
+                    <p>{% trans "Entre para a competição e mostre suas habilidades no nosso servidor!" %}</p>
+                    <div class="cta-buttons">
+                        <a href="{% url 'register' %}" class="cta-btn primary">{% trans "Criar Conta" %}</a>
+                        <a href="{% url 'downloads:download_list' %}" class="cta-btn secondary">{% trans "Baixar Jogo" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Faixa com o título apoiadores -->
+<div class="apoiadores-banner">
+  <div class="banner-track" id="bannerTrack">
+    {% with fixos="APOIADORES"|split:"," %}
+      {% for _ in "1234567890"|make_list %}
+        <span>{{ fixos.0 }}</span>
+      {% endfor %}
+    {% endwith %}
+  </div>
+</div>
+
+<!-- Carrossel de imagens dos apoiadores -->
+<section class="apoiadores-carousel">
+  <div class="carousel-track" id="carouselTrack">
+    {% with fixas="1,2,3,4,5"|split:"," %}
+      {% with total=apoiadores|length %}
+        {% for apoiador in apoiadores %}
+          <div class="apoiador-card">
+            <img src="{% apoiador_image_url apoiador %}" alt="{{ apoiador.nome_publico }}">
+          </div>
+        {% endfor %}
+
+        {% if total < 10 %}
+          {% with restante=10|sub:total %}
+            {% imagens_default_apoiadores as imagens_default %}
+            {% for _ in restante|to_range %}
+              {% with random=imagens_default|random_item %}
+                <div class="apoiador-card">
+                  <img src="{{ random }}" alt="Apoio Default">
+                </div>
+              {% endwith %}
+            {% endfor %}
+          {% endwith %}
+        {% endif %}
+      {% endwith %}
+    {% endwith %}
+  </div>
+</section>
+
+<!-- Faixa com o título apoiadores -->
+<div class="apoiadores-banner">
+  <div class="banner-track" id="bannerTrack2">
+    {% with fixos="APOIADORES"|split:"," %}
+      {% for _ in "1234567890"|make_list %}
+        <span>{{ fixos.0 }}</span>
+      {% endfor %}
+    {% endwith %}
+  </div>
+</div>
+
+<!-- Trailer / Gameplay -->
+<section class="trailer-section">
+<div class="container text-center">
+    <h2 class="trailer-title">🎬 {% trans "Trailer Oficial" %}</h2>
+
+    <div class="video-wrapper">
+    <div class="video-overlay"></div>
+    <iframe src="https://www.youtube.com/embed/{% if configuracao and configuracao.trailer_video_id %}{{ configuracao.trailer_video_id }}{% else %}Mm19W1PKMFQ{% endif %}" frameborder="0" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+    <p class="trailer-description">{% trans "Assista ao trailer e mergulhe no mundo épico do nosso servidor!" %}</p>
+</section>
+
+<!-- Community Section -->
+<section class="c">
+    <div class="c-title title container" data-aos="fade-up" data-aos-duration="2000">
+        <span><img src="{% static 'default/images/icons/text.png' %}">{% trans "Faça parte da nossa comunidade" %}</span>
+        <h1>{% trans "Junte-se à nossa" %} <strong>{% trans "comunidade" %}</strong> {% trans "e fique por dentro" %}</h1>
+    </div>
+
+    <div class="c-link" data-aos="fade-up" data-aos-duration="2000">
+        <a href="{% if configuracao %}{{ configuracao.link_discord }}{% else %}{{ PROJECT_DISCORD_URL }}{% endif %}" target="_blank"><i class="fa-brands fa-discord"></i></a>
+    </div>
+</section>
+
+<!-- Banners Rodapé -->
+{% if banners.bottom %}
+<div class="banners-container banners-bottom">
+    {% for banner in banners.bottom %}
+    <div class="banner-item" style="{{ banner.get_size_style }} {{ banner.get_position_style }}">
+        {% if banner.link %}
+        <a href="{{ banner.link }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ banner.image.url }}" alt="{{ banner.title|default:'Banner' }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </a>
+        {% else %}
+        <img src="{{ banner.image.url }}" alt="{{ banner.title|default:'Banner' }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block extrascripts %}
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+    function initInfiniteScroll(trackId, speed, padding = 0) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+
+      let offset = 0;
+
+      // Clonar os elementos filhos
+      const originalItems = Array.from(track.children);
+      originalItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+      });
+
+      // Calcular o comprimento total dos itens originais
+      const totalWidth = originalItems.reduce((acc, item) => {
+        return acc + item.offsetWidth + padding;
+      }, 0);
+
+      function animate() {
+        offset -= speed;
+        track.style.transform = `translateX(${offset}px)`;
+
+        const firstItem = track.children[0];
+        const firstItemRect = firstItem.getBoundingClientRect();
+        const trackRect = track.getBoundingClientRect();
+
+        if (firstItemRect.right < trackRect.left) {
+          const itemWidth = firstItem.offsetWidth + padding;
+          track.appendChild(firstItem);
+          offset += itemWidth;
+        }
+
+        // Reinicia o offset para evitar números grandes
+        if (Math.abs(offset) > totalWidth) {
+          offset = 0;
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+
+    // Inicializa com velocidades diferentes
+    initInfiniteScroll("carouselTrack", 0.5, 20); // carrossel
+    initInfiniteScroll("bannerTrack", 0.7, 80);   // faixa de texto
+    initInfiniteScroll("bannerTrack2", 0.7, 80);   // faixa de texto
+    
+  });
+    // Initialize AOS
+    AOS.init();
+
+    // Banner Pop-ups
+    document.addEventListener('DOMContentLoaded', function() {
+        {% if popup_banners %}
+        try {
+            const popupBanners = [
+                {% for banner in popup_banners %}
+                {
+                    id: {{ banner.pk|default:"0" }},
+                    image: '{{ banner.image.url|escapejs }}',
+                    title: {% if banner.title %}'{{ banner.title|escapejs }}'{% else %}''{% endif %},
+                    link: {% if banner.link %}'{{ banner.link|escapejs }}'{% else %}null{% endif %},
+                    popup_width: {{ banner.popup_width|default:"600" }},
+                    popup_height: {{ banner.popup_height|default:"400" }},
+                    popup_close_button: {{ banner.popup_close_button|yesno:"true,false" }},
+                    popup_auto_close: {{ banner.popup_auto_close|yesno:"true,false" }},
+                    popup_auto_close_delay: {{ banner.popup_auto_close_delay|default:"5" }},
+                    popup_show_once_per_session: {{ banner.popup_show_once_per_session|yesno:"true,false" }}
+                }{% if not forloop.last %},{% endif %}
+                {% endfor %}
+            ];
+            
+            if (popupBanners && Array.isArray(popupBanners) && popupBanners.length > 0) {
+            popupBanners.forEach(function(banner, index) {
+                const storageKey = 'banner_popup_' + banner.id;
+                
+                // Verificar se deve mostrar (apenas uma vez por sessão)
+                if (banner.popup_show_once_per_session) {
+                    // Modo: Apenas 1x por sessão
+                    if (sessionStorage.getItem(storageKey)) {
+                        return; // Já foi mostrado nesta sessão
+                    }
+                }
+                // Se popup_show_once_per_session for false, sempre mostra (a cada carregamento)
+                
+                // Criar overlay do pop-up
+                const overlay = document.createElement('div');
+                overlay.className = 'banner-popup-overlay';
+                overlay.id = 'banner-popup-' + banner.id;
+                
+                // Criar container do pop-up
+                const container = document.createElement('div');
+                container.className = 'banner-popup-container';
+                container.style.width = banner.popup_width + 'px';
+                container.style.height = banner.popup_height + 'px';
+                container.style.maxWidth = '90vw';
+                container.style.maxHeight = '90vh';
+                
+                // Criar conteúdo
+                const content = document.createElement('div');
+                content.className = 'banner-popup-content';
+                
+                if (banner.link) {
+                    const link = document.createElement('a');
+                    link.href = banner.link;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    const img = document.createElement('img');
+                    img.src = banner.image;
+                    img.alt = banner.title || 'Banner';
+                    link.appendChild(img);
+                    content.appendChild(link);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = banner.image;
+                    img.alt = banner.title || 'Banner';
+                    content.appendChild(img);
+                }
+                
+                container.appendChild(content);
+                
+                // Criar botão de fechar
+                if (banner.popup_close_button) {
+                    const closeBtn = document.createElement('button');
+                    closeBtn.className = 'banner-popup-close';
+                    closeBtn.innerHTML = '×';
+                    closeBtn.setAttribute('aria-label', 'Fechar');
+                    closeBtn.onclick = function() {
+                        closePopup(overlay, storageKey);
+                    };
+                    container.appendChild(closeBtn);
+                }
+                
+                // Fechar ao clicar no overlay (fora do pop-up)
+                overlay.onclick = function(e) {
+                    if (e.target === overlay) {
+                        closePopup(overlay, storageKey);
+                    }
+                };
+                
+                overlay.appendChild(container);
+                // Garantir que o overlay seja inserido no final do body para ficar acima de tudo
+                if (document.body) {
+                    document.body.appendChild(overlay);
+                    // Forçar estilos inline para garantir posicionamento
+                    overlay.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 99999 !important; display: none !important; align-items: center !important; justify-content: center !important; background: rgba(0, 0, 0, 0.8) !important; margin: 0 !important; padding: 0 !important;';
+                }
+                
+                // Mostrar pop-up com delay baseado no índice
+                setTimeout(function() {
+                    overlay.classList.add('active');
+                    // Forçar display flex quando ativo
+                    overlay.style.display = 'flex';
+                    
+                    // Salvar no sessionStorage apenas se for "1x por sessão"
+                    if (banner.popup_show_once_per_session) {
+                        sessionStorage.setItem(storageKey, 'shown');
+                    }
+                    // Se for "a cada carregamento", não salva no sessionStorage, então sempre aparecerá
+                }, index * 500); // Delay entre múltiplos pop-ups
+                
+                // Fechar automaticamente se configurado
+                if (banner.popup_auto_close && banner.popup_auto_close_delay) {
+                    setTimeout(function() {
+                        closePopup(overlay, storageKey);
+                    }, banner.popup_auto_close_delay * 1000);
+                }
+            });
+            }
+        } catch (e) {
+            console.error('Erro ao carregar pop-ups de banner:', e);
+        }
+        {% else %}
+        // Nenhum banner pop-up configurado
+        {% endif %}
+        
+        function closePopup(overlay, storageKey) {
+            if (!overlay) return;
+            overlay.classList.remove('active');
+            overlay.style.display = 'none';
+            setTimeout(function() {
+                if (overlay && overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 300);
+        }
+    });
+</script>
+{% endblock %}

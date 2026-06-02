@@ -1,0 +1,10 @@
+{
+	"id": "35309", 
+	"name": "Gatekeeper", 
+	"title": "Innadril", 
+	"level": "56", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

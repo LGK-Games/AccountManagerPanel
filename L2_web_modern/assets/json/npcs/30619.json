@@ -1,0 +1,10 @@
+{
+	"id": "30619", 
+	"name": "Driko", 
+	"title": "Vuku Chief", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

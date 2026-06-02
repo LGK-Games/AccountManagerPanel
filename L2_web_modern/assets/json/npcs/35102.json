@@ -1,0 +1,10 @@
+{
+	"id": "35102", 
+	"name": "Greenspan", 
+	"title": "Mercenary Manager", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "30580", 
+	"name": "Parugon", 
+	"title": "Centurion", 
+	"level": "80", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

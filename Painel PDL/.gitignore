@@ -1,0 +1,67 @@
+# Arquivos compilados Python
+*.pyc
+# Preservar versão do sistema (nunca ignorar)
+!core/version.py
+# Script de workflow/release (só local, não versionado)
+WORKFLOW.BAT
+# Temp usado pelo WORKFLOW.BAT
+core/version.py.new
+
+# Arquivos de sistema macOS
+*.DS_Store
+
+# Arquivos de distribuição de pacotes Python
+*.egg*
+
+# Diretórios de distribuição
+/dist/
+
+# Configurações do IDE IntelliJ IDEA
+/.idea
+
+# Documentação gerada
+/docs/_build/
+
+# Dependências do Node.js
+/node_modules/
+
+# Diretórios de construção
+build/
+
+# Ambientes virtuais Python
+.env
+.venv
+
+# Arquivos estáticos
+/staticfiles/
+
+# Arquivos de banco de dados SQLite
+*.sqlite*
+
+# Migrações do Django
+**/migrations/**
+!**/migrations/
+!**/migrations/__init__.py
+
+# Arquivos de MEDIA
+/media/
+
+# Arquivos de logs
+/logs/**
+!logs/
+
+# sonar
+/.scannerwork/
+
+# celery
+*celerybeat*
+
+# nginx / password
+/nginx/.htpasswd
+
+# themes
+/themes/
+
+# node_modules
+/frontend/pwa-push/node_modules/
+/frontend/pwa-push/dist/

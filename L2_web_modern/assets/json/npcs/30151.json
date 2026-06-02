@@ -1,0 +1,10 @@
+{
+	"id": "30151", 
+	"name": "Chad", 
+	"title": "Warehouse Keeper", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

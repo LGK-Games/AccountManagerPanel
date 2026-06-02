@@ -1,0 +1,10 @@
+{
+	"id": "30643", 
+	"name": "First Orc", 
+	"title": "", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

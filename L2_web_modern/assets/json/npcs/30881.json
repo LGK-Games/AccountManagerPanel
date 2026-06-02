@@ -1,0 +1,10 @@
+{
+	"id": "30881", 
+	"name": "Sanders", 
+	"title": "Border Outpost Aide", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

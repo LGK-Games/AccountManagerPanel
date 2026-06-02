@@ -1,0 +1,10 @@
+{
+	"id": "27034", 
+	"name": "Lizardman", 
+	"title": "Quest Monster", 
+	"level": "11", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[]
+}

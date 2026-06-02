@@ -1,0 +1,10 @@
+{
+	"id": "30995", 
+	"name": "Race Manager", 
+	"title": "", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

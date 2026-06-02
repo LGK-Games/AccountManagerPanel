@@ -1,0 +1,10 @@
+{
+	"id": "30710", 
+	"name": "Weston", 
+	"title": "Guard", 
+	"level": "80", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

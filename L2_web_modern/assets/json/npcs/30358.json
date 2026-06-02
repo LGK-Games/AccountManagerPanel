@@ -1,0 +1,10 @@
+{
+	"id": "30358", 
+	"name": "Thifiell", 
+	"title": "Tetrarch", 
+	"level": "70", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4045", "level": "1"}]
+}

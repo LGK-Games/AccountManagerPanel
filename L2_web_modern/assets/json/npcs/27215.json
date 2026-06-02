@@ -1,0 +1,10 @@
+{
+	"id": "27215", 
+	"name": "Guardian of Forbidden Knowledge", 
+	"title": "Quest Monster", 
+	"level": "76", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4414", "level": "1"}]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "27100", 
+	"name": "Skeletal Mercenary", 
+	"title": "Quest Monster", 
+	"level": "39", 
+	"isRaid": "false", 
+	"isGrandBoss": "false", 
+	"drops":[],
+	"skills":[{"id": "4275", "level": "2"}, {"id": "4278", "level": "1"}]
+}
